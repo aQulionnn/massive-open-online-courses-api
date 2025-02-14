@@ -7,5 +7,5 @@ public class Lecture
     public string RecordUrl { get; set; } = string.Empty;
 
     public Guid ModuleId { get; set; }
-    public Module Module { get; set; } = new Module();
+    public Module Module { get; set; } 
 }

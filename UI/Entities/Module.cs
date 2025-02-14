@@ -7,7 +7,7 @@ public class Module
     public string Description { get; set; } = string.Empty;
 
     public Guid CourseId { get; set; }
-    public Course Course { get; set; } = new Course();
+    public Course Course { get; set; }
 
     public IEnumerable<Lecture> Lectures { get; set; } = new List<Lecture>();
 }

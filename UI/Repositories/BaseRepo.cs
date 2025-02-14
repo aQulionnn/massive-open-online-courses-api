@@ -14,20 +14,6 @@ public class BaseRepo<T>(AppDbContext context) : IBaseRepo<T>
         return createEntity;
     }
 
-    public async Task<IEnumerable<T>> GetAllAsync()
-    {
-        return await context.Set<T>().ToListAsync();
-    }
-
-    public async Task<T?> GetByIdAsync(Guid id)
-    {
-        var entity = await context.Set<T>().FindAsync(id);
-        if (entity == null) 
-            return null;
-        
-        return entity;
-    }
-
     public async Task<T?> UpdateAsync(Guid id, T updateEntity)
     {
         var entity = await context.Set<T>().FindAsync(id);

@@ -7,7 +7,7 @@ public class Course
     public string Description { get; set; } = string.Empty;
 
     public Guid UniversityId { get; set; }
-    public University University { get; set; } = new University();
+    public University University { get; set; }
     
     public IEnumerable<Module> Modules { get; set; } = new List<Module>();
 }
